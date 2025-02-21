@@ -1,0 +1,15 @@
+[Unit]
+Description=BELABOX AutoStart Service
+After=belaUI.socket
+Requires=belaUI.socket
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/sleep 10
+ExecStart=/usr/bin/node /home/user/autostart.js
+RemainAfterExit=yes
+User=user
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
