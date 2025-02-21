@@ -22,4 +22,4 @@ Some modems take longer to recognize and become ready than others. By default, t
 You can simply disable the service from starting: `sudo systemctl disable BELABOXAutoStart`
 
 ### Note: 
-This doesn't change any of the BELABOX code and simply uses a local websocket connection to connect, get the current saved config and send the start stream command.
+This doesn't change any of the BELABOX code and simply uses a local websocket connection to connect, get the current saved config and send the start stream command. That doesn't mean it won't break in the future if changes are made to belaUI though.
